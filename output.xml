@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200617 18:36:40.248" rpa="false">
+<suite id="s1" name="TestCases" source="C:\Users\asus\PycharmProjects\codemi\TestCase\TestCases.robot">
+<kw name="open twitter" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${TWITTER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200617 18:36:44.515" level="INFO">Opening browser 'chrome' to base url 'https://twitter.com/'.</msg>
+<status status="PASS" starttime="20200617 18:36:44.514" endtime="20200617 18:37:14.165"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200617 18:37:14.167" endtime="20200617 18:37:16.946"></status>
+</kw>
+<status status="PASS" starttime="20200617 18:36:44.513" endtime="20200617 18:37:16.947"></status>
+</kw>
+<test id="s1-t1" name="TestCase01">
+<kw name="sleep test case" type="setup">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" starttime="20200617 18:37:16.960" endtime="20200617 18:37:16.961"></status>
+</kw>
+<status status="PASS" starttime="20200617 18:37:16.959" endtime="20200617 18:37:16.961"></status>
+</kw>
+<kw name="Login Twitter" library="LandingPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ID}</arg>
+<arg>ziardiA</arg>
+</arguments>
+<msg timestamp="20200617 18:37:16.963" level="INFO">Typing text 'ziardiA' into text field 'name:session[username_or_email]'.</msg>
+<status status="PASS" starttime="20200617 18:37:16.963" endtime="20200617 18:37:24.226"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD}</arg>
+<arg>ziardi12345</arg>
+</arguments>
+<msg timestamp="20200617 18:37:24.228" level="INFO">Typing text 'ziardi12345' into text field 'name:session[password]'.</msg>
+<status status="PASS" starttime="20200617 18:37:24.226" endtime="20200617 18:37:28.350"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20200617 18:37:28.351" level="INFO">Clicking element 'xpath://div[@role="button"]//span[text()="Log in"]'.</msg>
+<status status="PASS" starttime="20200617 18:37:28.350" endtime="20200617 18:37:35.563"></status>
+</kw>
+<status status="PASS" starttime="20200617 18:37:16.962" endtime="20200617 18:37:35.564"></status>
+</kw>
+<status status="PASS" starttime="20200617 18:37:16.947" endtime="20200617 18:37:35.568" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TestCase02">
+<kw name="sleep test case" type="setup">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" starttime="20200617 18:37:35.861" endtime="20200617 18:37:35.862"></status>
+</kw>
+<status status="PASS" starttime="20200617 18:37:35.861" endtime="20200617 18:37:35.862"></status>
+</kw>
+<kw name="Upload Image and Tweet" library="HomePage">
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>${IMAGE}</arg>
+<arg>D:/ttd.jpg</arg>
+</arguments>
+<msg timestamp="20200617 18:37:35.863" level="INFO">Sending D:\ttd.jpg to browser.</msg>
+<status status="PASS" starttime="20200617 18:37:35.863" endtime="20200617 18:37:41.934"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_tweet2}</arg>
+<arg>file codemi</arg>
+</arguments>
+<msg timestamp="20200617 18:37:41.935" level="INFO">Typing text 'file codemi' into text field 'xpath://div[@class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']'.</msg>
+<status status="PASS" starttime="20200617 18:37:41.934" endtime="20200617 18:37:47.487"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${tweet}</arg>
+</arguments>
+<msg timestamp="20200617 18:37:47.488" level="INFO">Clicking element 'xpath://div[@role="button"]//span[text()="Tweet"]'.</msg>
+<status status="PASS" starttime="20200617 18:37:47.487" endtime="20200617 18:37:49.897"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${IMAGE_UPLOADED}</arg>
+</arguments>
+<status status="PASS" starttime="20200617 18:37:49.897" endtime="20200617 18:37:55.338"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PROFILE}</arg>
+</arguments>
+<msg timestamp="20200617 18:37:55.339" level="INFO">Clicking element 'xpath://div[@role="presentation"]'.</msg>
+<status status="PASS" starttime="20200617 18:37:55.338" endtime="20200617 18:37:57.788"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOG_OUT}</arg>
+</arguments>
+<msg timestamp="20200617 18:37:57.789" level="INFO">Clicking element 'xpath://div[contains(text(),"Log out")]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200617 18:38:05.293" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200617 18:37:58.913" endtime="20200617 18:38:05.294"></status>
+</kw>
+<msg timestamp="20200617 18:38:17.998" level="FAIL">Element with locator 'xpath://div[contains(text(),"Log out")]' not found.</msg>
+<status status="FAIL" starttime="20200617 18:37:57.789" endtime="20200617 18:38:17.998"></status>
+</kw>
+<status status="FAIL" starttime="20200617 18:37:35.862" endtime="20200617 18:38:17.998"></status>
+</kw>
+<status status="FAIL" starttime="20200617 18:37:35.860" endtime="20200617 18:38:18.279" critical="yes">Element with locator 'xpath://div[contains(text(),"Log out")]' not found.</status>
+</test>
+<kw name="close twitter" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200617 18:38:18.285" endtime="20200617 18:38:37.554"></status>
+</kw>
+<status status="PASS" starttime="20200617 18:38:18.284" endtime="20200617 18:38:37.554"></status>
+</kw>
+<status status="FAIL" starttime="20200617 18:36:40.272" endtime="20200617 18:38:37.554"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="TestCases">TestCases</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200617 18:36:40.466" level="ERROR">Error in file 'C:\Users\asus\PycharmProjects\codemi\TestCase\TestCases.robot' on line 2: Importing test library 'Seleniumlibrary' failed: ModuleNotFoundError: No module named 'Seleniumlibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\asus\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
+  c:\users\asus\appdata\local\programs\python\python38-32\python38.zip
+  c:\users\asus\appdata\local\programs\python\python38-32\DLLs
+  c:\users\asus\appdata\local\programs\python\python38-32\lib
+  c:\users\asus\appdata\local\programs\python\python38-32
+  c:\users\asus\appdata\local\programs\python\python38-32\lib\site-packages</msg>
+<msg timestamp="20200617 18:36:44.442" level="ERROR">Error in file 'C:\Users\asus\PycharmProjects\codemi\resources\LandingPage.robot' on line 2: Importing test library 'Seleniumlibrary' failed: ModuleNotFoundError: No module named 'Seleniumlibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\asus\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
+  c:\users\asus\appdata\local\programs\python\python38-32\python38.zip
+  c:\users\asus\appdata\local\programs\python\python38-32\DLLs
+  c:\users\asus\appdata\local\programs\python\python38-32\lib
+  c:\users\asus\appdata\local\programs\python\python38-32
+  c:\users\asus\appdata\local\programs\python\python38-32\lib\site-packages</msg>
+</errors>
+</robot>
